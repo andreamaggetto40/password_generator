@@ -1,4 +1,5 @@
 import random as rand
+import time
 
 def init():
     print("Software used to create a password")
@@ -20,6 +21,8 @@ def encryption():
                 break
         for i in range(len(string_to_encrypt),len(string_to_encrypt) * 2):
             password += str(rand.randint(len(string_to_encrypt),len(string_to_encrypt) * 2))
+        time.sleep(2)
+        print("Password encrypted!")
         return password
     else:
         print("String length MUST BE greater than 0!")
